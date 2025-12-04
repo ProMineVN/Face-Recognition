@@ -1,0 +1,1 @@
+INSERT INTO students (name, ma_lop, ma_hoc_sinh, full_name) VALUES('Luong Xuan Cuong', 'THT_09', 'LXC_01', 'Lương Xuân Cương')
