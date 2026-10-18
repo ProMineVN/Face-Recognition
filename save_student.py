@@ -36,7 +36,7 @@ def saveImages(code):
 
 def insertOrUpdate():
     print(code_student.get())
-    conn = sqlite3.connect("D:\Python\product\data_student.db")
+    conn = sqlite3.connect("data_student.db")
     query = "SELECT * FROM students WHERE id=" + "'" + str(code_student.get()) + "'"
     cusror = conn.execute(query)
     isRecordExist = 0
