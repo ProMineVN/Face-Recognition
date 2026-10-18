@@ -17,7 +17,7 @@ face_cascade = cv2.CascadeClassifier(
 recognizer = cv2.face.LBPHFaceRecognizer_create()
 recognizer.read("recoginzer/trainningData.yml")
 def getProfile(id):
-    conn = sqlite3.connect("D:\Python\product\data_student.db")
+    conn = sqlite3.connect("data_student.db")
     query = "SELECT * FROM students WHERE ID="+ str(id)
     cursor = conn.execute(query)
     profile = None
@@ -38,7 +38,7 @@ def check_in(id):
     ngay_hom_nay = date.today()	
     ngay_bat_dau = ngay_hom_nay.strftime("%Y/%m/%d")
     print(ngay_hom_nay)
-    conn = sqlite3.connect("D:\Python\product\data_student.db")
+    conn = sqlite3.connect("data_student.db")
     query = "SELECT * FROM lesson WHERE id_hoc_sinh=" + "'" + str(id) + "'" + " and ngay_bat_dau=" + "'" + str(ngay_bat_dau) + "'"
     cusror = conn.execute(query)
 
